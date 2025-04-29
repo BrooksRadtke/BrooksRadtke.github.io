@@ -60,6 +60,14 @@
     font-size: 20px;
 }
 
-.tech-stack-description {
+.personal-description, .tech-stack-description {
     font-size: 18px;
+}
+
+.year-footer {
+    position: sticky;
+}
+
+.email {
+    padding: 15px;
 }
