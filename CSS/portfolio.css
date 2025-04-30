@@ -71,3 +71,7 @@
 .email {
     padding: 15px;
 }
+
+.skill-pill {
+    justify-content: center;
+}
