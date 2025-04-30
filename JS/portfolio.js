@@ -1,49 +1,9 @@
-// These open and close the contact form
-function openForm()
-{
-    document.getElementById("myForm").style.display = "block";
-}
+// "date" is object of Date() class
+let date = new Date();
 
-function closeForm()
-{
-    document.getElementById("myForm").style.display = "none";
-}
+// Use "getYear()" method and stores 
+// the returned value to "n"
+let currentYear = date.getFullYear();
 
-//this function cover slide show
-var slideIndex = 1;
-showSlides(slideIndex);
-
-function plusSlides(n)
-{
-    showSlides(slideIndex += n);
-}
-
-function currnetSlide(n)
-{
-    showSlides(slideIndex = n);
-}
-
-function showSlides(n)
-{
-    var i;
-    var slides = document.getElementsByClassName("mySlides");
-    var dots = document.getElementsByClassName("dot");
-    if(n > slides.length)
-    {
-        slideIndex = 1
-    }
-    if(n < 1)
-    {
-        slideIndex = slides.length
-    }
-    for(i = 0; i < slides.length; i++)
-    {
-        slides[i].style.display = "none";
-    }
-    for(i = 0; i < dots.length; i++)
-    {
-        dots[i].className = dots[i].className.replace(" active", "");
-    }
-    slides[slideIndex-1].style.display = "block";
-    dots[slideIndex-1].className += " active";
-}
+// Display the result
+document.getElementById('copyright-year').innerHTML = "&copy;" + currentYear;
